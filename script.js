@@ -16,3 +16,10 @@ function getComputerChoice () {
 }
 console.log(getComputerChoice());
 
+// Function name getHumanChoice
+// Ask user for input on rock paper scissors
+
+function getHumanChoice() {
+    return prompt("rock paper or scissors?");
+}
+console.log(getHumanChoice());
