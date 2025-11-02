@@ -9,11 +9,11 @@ function getComputerChoice() {
     }
 }
 
-// function name getHumanChoice
-// get user choice
-// return choice 
 function getHumanChoice() {
     let userChoice = prompt("rock paper or scissors?");
     return userChoice;
 }
 console.log(getHumanChoice());
+
+let humanScore = 0;
+let computerScore = 0;
