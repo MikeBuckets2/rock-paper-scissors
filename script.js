@@ -1,3 +1,6 @@
+let humanScore = 0;
+let computerScore = 0;
+
 // Function name getComputerChoice
 // that generates randomly
 // rock paper or scissors
@@ -5,7 +8,7 @@
 // to assign to rock paper or scissors
 
 function getComputerChoice () {
-    let choice = Math.random();
+    const choice = Math.random();
     if (choice < 0.33) {
         return "rock";
     } else if (choice < 0.66) {
