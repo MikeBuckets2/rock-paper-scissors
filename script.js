@@ -1,9 +1,3 @@
-//Function name getComputerChoice
-//  Generate a number between 0 and 1
-//  If less than 0.33 return rock
-//  Else if less than 0.66 return paper
-//  Else return scissors
-
 function getComputerChoice() {
     let randomNum = Math.random(); 
     if (randomNum < 0.33) {
@@ -14,4 +8,12 @@ function getComputerChoice() {
         return "scissors";
     }
 }
-console.log(getComputerChoice());
+
+// function name getHumanChoice
+// get user choice
+// return choice 
+function getHumanChoice() {
+    let userChoice = prompt("rock paper or scissors?");
+    return userChoice;
+}
+console.log(getHumanChoice());
