@@ -46,8 +46,16 @@ function playRound(humanChoice, computerChoice) {
             computerScore++;
         }
 }
-const humanAnswer = getHumanChoice();
-const computerAnswer = getComputerChoice();
-console.log(playRound(humanAnswer, computerAnswer));
-console.log(humanScore);
-console.log(computerScore);
+
+// Function name playGame
+// Move playRound inside playGame
+// Move score inside playGame
+// loop score until 5
+
+function playGame() {
+    humanScore = 0;
+    computerScore = 0;
+    const humanAnswer = getHumanChoice();
+    const computerAnswer = getComputerChoice();
+    playRound(humanAnswer, computerAnswer);
+}
