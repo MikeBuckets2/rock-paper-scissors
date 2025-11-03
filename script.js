@@ -55,7 +55,20 @@ function playRound(humanChoice, computerChoice) {
 function playGame() {
     humanScore = 0;
     computerScore = 0;
-    const humanAnswer = getHumanChoice();
-    const computerAnswer = getComputerChoice();
-    playRound(humanAnswer, computerAnswer);
-}
+
+    for (let i = 1; i <= 5; i++) {
+        const humanAnswer = getHumanChoice();
+        const computerAnswer = getComputerChoice();
+        playRound(humanAnswer, computerAnswer);
+        console.log(`Score is Human: ${humanScore} Computer: ${computerScore} after Round ${i}`);
+    }
+    if (humanScore > computerScore) {
+        console.log("Chicken chicken winner dinner"); 
+    } else if (computerScore > humanScore) {
+        console.log("Sorry, you have lost");
+    } else {
+        console.log("No one likes a tie but this is one");
+    }
+ }
+
+    playGame();
