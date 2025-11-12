@@ -18,12 +18,6 @@ function getComputerChoice () {
     }
 }
 
-// Function name getHumanChoice
-// Ask user for input on rock paper scissors
-
-function getHumanChoice() {
-    return prompt("rock paper or scissors?");
-}
 
 // Function name playRound
 // humanChoice and computerChoice parameters 
@@ -33,7 +27,6 @@ function getHumanChoice() {
 // increase winner score by 1
 
 function playRound(humanChoice, computerChoice) {
-    humanChoice = humanChoice.toLowerCase();
     if (humanChoice === computerChoice) {
         console.log("It's a tie!");
     } else if (humanChoice === "rock" && computerChoice === "scissors" || 
@@ -47,28 +40,19 @@ function playRound(humanChoice, computerChoice) {
         }
 }
 
-// Function name playGame
-// Move playRound inside playGame
-// Move score inside playGame
-// loop score until 5
+const rock = document.querySelector(".rock");
+rock.addEventListener("click", () => {
+    return playRound("rock", getComputerChoice());
+});
 
-function playGame() {
-    humanScore = 0;
-    computerScore = 0;
+const paper = document.querySelector(".paper");
+paper.addEventListener("click", () => {
+    return playRound("paper", getComputerChoice());
+});
 
-    for (let i = 1; i <= 5; i++) {
-        const humanAnswer = getHumanChoice();
-        const computerAnswer = getComputerChoice();
-        playRound(humanAnswer, computerAnswer);
-        console.log(`Score is Human: ${humanScore} Computer: ${computerScore} after Round ${i}`);
-    }
-    if (humanScore > computerScore) {
-        console.log("Chicken chicken winner dinner"); 
-    } else if (computerScore > humanScore) {
-        console.log("Sorry, you have lost");
-    } else {
-        console.log("No one likes a tie but this is one");
-    }
- }
+const scissors = document.querySelector(".scissors");
+scissors.addEventListener("click", () => {
+    return playRound("scissors", getComputerChoice());
+});
 
-    playGame();
+
