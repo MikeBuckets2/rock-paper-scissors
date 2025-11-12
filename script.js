@@ -1,12 +1,6 @@
 let humanScore = 0;
 let computerScore = 0;
 
-// Function name getComputerChoice
-// that generates randomly
-// rock paper or scissors
-// random number 0 to 1
-// to assign to rock paper or scissors
-
 function getComputerChoice () {
     const choice = Math.random();
     if (choice < 0.33) {
@@ -17,14 +11,6 @@ function getComputerChoice () {
         return "scissors";
     }
 }
-
-
-// Function name playRound
-// humanChoice and computerChoice parameters 
-// use function humanChoice and computerChoice as arguments
-// humanChoice case insensitive 
-// Display a round winner 
-// increase winner score by 1
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
