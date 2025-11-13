@@ -29,19 +29,12 @@ function playRound(humanChoice, computerChoice) {
         }
 }
 
-const rock = document.querySelector(".rock");
-rock.addEventListener("click", () => {
-    return playRound("rock", getComputerChoice());
-});
-
-const paper = document.querySelector(".paper");
-paper.addEventListener("click", () => {
-    return playRound("paper", getComputerChoice());
-});
-
-const scissors = document.querySelector(".scissors");
-scissors.addEventListener("click", () => {
-    return playRound("scissors", getComputerChoice());
+const buttons = document.querySelectorAll("button");
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        const userChoice = button.className;
+        playRound(userChoice, getComputerChoice());
+    });
 });
 
 const results = document.querySelector(".results");
@@ -49,6 +42,6 @@ const score = document.querySelector(".score");
 
 function updateScore() {
     score.textContent = `User: ${humanScore} | Computer: ${computerScore}`;
-}
+};
 
 updateScore();
