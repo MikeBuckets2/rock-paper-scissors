@@ -26,8 +26,17 @@ function playRound(humanChoice, computerChoice) {
             results.textContent = `You lose! ${computerChoice} beats ${humanChoice}`;
             computerScore++;
             updateScore();
-        }
-}
+        };
+    if (humanScore >= 5) {
+        results.textContent = "You have won the game! Refresh to play again";
+        disableButton();
+        return;
+     } else if (computerScore > 4) {
+        results.textContent = "You have lost the game! Refresh to play again";
+        disableButton();
+        return;
+    };
+};
 
 const buttons = document.querySelectorAll("button");
 buttons.forEach(button => {
@@ -45,3 +54,9 @@ function updateScore() {
 };
 
 updateScore();
+
+function disableButton() {
+    buttons.forEach(button => {
+        button.disabled = true;
+    });
+};
